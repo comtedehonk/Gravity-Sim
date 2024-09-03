@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main>
+    <div id="side-buttons">
+      <button type="button" id="pause">
+        <svg width="50" height="50" id="pause-icon">
+          <rect x="8" y="10" width="7" height="30" fill="white" />
+          <rect x="28" y="10" width="7" height="30" fill="white" />
+        </svg>
+        <svg width="50" height="50" id="start-icon">
+          <polygon points="10,9 10,41 37,25"
+  style="fill:white;" />
+        </svg>
+      </button>
+      <button type="button" id="reset">
+        <img id="reset-icon" src="https://icon-library.com/images/restart-icon/restart-icon-15.jpg"/>
+      </button>
+      <button type="button" id="help">
+        ?
+      </button>
+    </div>
+    <div id ="sliders">
+      <div id="speed">
+        <input type="range" id="speed-slider" min="1" value="40">
+          <label id="speed-label" for="speed">Speed</label>
+      </div>
+      <div id="gravity">
+        <input type="range" id="gravity-slider" min="0" max="10" step="0.1" value="4">
+          <label id="gravity-label" for="gravity">Gravity</label>
+          
+      </div> 
+    </div>
+    
+    <div class="context-menu" id="body-menu">
+      <h2> Body #</h2>
+      <div id="follow-body">Follow</div>
+      <div id="delete-body">Delete</div>
+    </div>
+    <div class="context-menu" id="help-menu">
+      <h1> Help &amp Controls </h1>       
+      <ul>
+        <li>Click, drag, and release to create new bodies</li>
+        <li>Hold to create larder bodies</li>
+        <li>Right Click bodies to follow and delete them</li>
+        <li>WASD or arrow keys to pan around</li>
+        <li>Scroll to zoom in/out</li>
+      </ul>
+    </div>
+    <canvas id="myCanvas"></canvas>
+    <div class="info-bar" id="info-bar">
+      made by comtedehonk || FPS : <span id="fps"> 60 </span> | Zoom : <span id="zoom">1</span>x | Bodies:
+      <span id="bodies">5</span> 
+      | Collision Mode:
+      <button type="button" id="add" class="collision-mode">ADD</button>
+      <button type="button" id="break" class="collision-mode">BREAK</button>
+      <button type="button" id="bounce" class="collision-mode">BOUNCE</button>
+      <a href="https://editor.p5js.org/ryan7rcl/sketches/hprPmJR4i" id="source-code-link" target="_blank"></a>
+    </div>
+    <script src="gravitysim.js"></script>      
+    </main>
+    
+
+  </body>
+</html>

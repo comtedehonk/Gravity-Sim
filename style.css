@@ -1,0 +1,187 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace
+  }
+  canvas {
+    display: block;
+  }
+  #info-bar {
+    user-select: none;
+    background-color: rgb(30, 30, 30);
+    color: rgb(167,167,167);
+    padding: 4px;
+    padding-bottom: 6px;
+    height: 18px;
+    z-index: 1; 
+    overflow: hidden
+      
+  }
+  
+  .info-bar button {
+    background-color: rgb(30, 30, 30);
+    color: rgb(167,167,167);
+    
+    font-family: monospace
+  }
+  #absolute, #bounce {
+    color: azure;
+    background-color: rgb(112, 121, 128);
+  }
+  
+  #side-buttons {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    row-gap: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    
+  }
+  
+  #side-buttons button {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(50, 50, 50);
+    
+  }
+  
+  #help {
+    color: white;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    user-select: none;
+    
+  }
+  
+  #side-buttons button:hover {
+    background-color: rgb(100, 100, 100);
+    border-color: rgb(100, 100, 100);
+  }
+  #reset-icon {
+    height: 35px;
+    position: relative;
+    top: 2px;
+    user-select: none;
+    pointer-events: none;
+  
+  }
+  
+  #start-icon {
+    display: none;
+  }
+  
+  #sliders {    
+    display: grid;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    grid-template-columns: auto;
+    row-gap: 30px;
+    width: 200px;
+  }
+  #sliders input {
+    appearance: none;
+    width: 100%;
+    height: 17px;
+    background: #d3d3d3;
+    outline: none;  
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  #sliders div {
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  #sliders input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: black;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: -410px 0 0 400px rgb(100, 100, 100);
+    
+  }
+  
+  #sliders div:hover {
+    opacity: 1;
+  }
+  
+  #sliders label {
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    user-select: none;
+  }
+  
+  .context-menu {
+    z-index: 5;
+    display: none;
+    user-select: none;
+  }
+  
+  #body-menu {
+     
+    position: absolute;
+    background-color: rgb(60, 60, 60);
+    width: 100px;
+    font-size: 15px;
+    color: white;
+    grid-template-columns: auto; 
+    user-select: none;
+  }
+  
+  #body-menu h2{
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+  
+  #body-menu div{
+    padding: 4px;
+    transition: background-color .3s;
+  }
+  
+  #body-menu div:hover{
+    background-color: rgb(110, 110, 110);  
+  }
+  
+  #help-menu {
+    background-color: rgb(60, 60, 60);
+    position: absolute;
+    top: 17%;
+    left: 100px;
+    border: 3px solid black;
+    color: white;
+    padding-right: 20px;
+  }
+  
+  #help-menu h1 {
+    padding-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 7px;
+  }
+  
+  a:visited {
+    color: rgb(167,167,167);
+  }
+  
+  a {
+    color: rgb(167,167,167);
+  }
+  
+  #source-code-link {
+    margin-top: 3px;
+    margin-right: 5px;
+    float: right;
+  }
